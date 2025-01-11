@@ -1,5 +1,3 @@
-from logging import root
-
 from selenium.webdriver.common.by import By
 
 class Locators:
@@ -12,24 +10,21 @@ class Locators:
     REG_2_BUTTON = [By.CSS_SELECTOR, "form button"]
     PASSWORD_ERROR = [By.CSS_SELECTOR, ".input__error"]
     #Вход
-    ACCOUNT_BUTTON = [By.XPATH, '//*[@id="root"]/div/main/section[2]/div/button']
-    PLACE_AN_ORDER_BUTTON = [By.XPATH, '//*[@id="root"]/div/main/section[2]/div/button']
-    FIELD_EMAIL_LOGIN = [By.XPATH, '//*[@id="root"]/div/main/div/form/fieldset[1]/div/div/input']
-    FIELD_PASSWORD_LOGIN = [By.XPATH, '//*[@id="root"]/div/main/div/form/fieldset[2]/div/div/input']
-    LOGIN_BUTTON = [By.XPATH, '//*[@id="root"]/div/main/div/div/p/a']
-    RECOVER_PASSWORD = [By.XPATH, '//*[@id="root"]/div/main/div/div/p[2]/a']
-    LOGIN_BUTTON_FORGET_PASSWORD = [By.XPATH, '//*[@id="root"]/div/main/div/div/p/a']
+    ACCOUNT_BUTTON = [By.CSS_SELECTOR, 'section[class*=BurgerConstructor] button[class*=primary]']
+    PLACE_AN_ORDER_BUTTON = [By.CSS_SELECTOR, 'section[class*=BurgerConstructor] button[class*=primary]']
+    FIELD_EMAIL_LOGIN = [By.CSS_SELECTOR, 'form[class*=Auth_form] input[type=text]']
+    FIELD_PASSWORD_LOGIN = [By.CSS_SELECTOR, 'form[class*=Auth_form] input[type=password]']
+    LOGIN_BUTTON = [By.CSS_SELECTOR, 'form[class*=Auth_form] button[class*=primary]']
+    LOGIN_LINK = [By.CSS_SELECTOR, 'a[href*="/login"]']
+    RECOVER_PASSWORD_LINK = [By.CSS_SELECTOR, 'div[class*=Auth_login] a[href*=forgot-password]']
+    LOGIN_BUTTON_FORGET_PASSWORD = [By.CSS_SELECTOR, 'form[class*=Auth_form] button[class*=primary]']
     #Выход
-    EXIT_BUTTON= [By.CSS_SELECTOR, 'main nav ul li:last-child button']
+    EXIT_BUTTON = [By.CSS_SELECTOR, 'main nav ul li:last-child button']
     #Конструктор
-    CONSTRUCTOR_BUTTON = [By.LINK_TEXT, 'Конструктор']
-    MAKE_BURGER_LINK = [By.LINK_TEXT, 'Соберите бургер']
+    CONSTRUCTOR_BUTTON = [By.CSS_SELECTOR, 'ul[class*=AppHeader_header__list] li:nth-child(1) a']
     LOGO_STELLAR_BURGERS = [By.CSS_SELECTOR, 'header nav div a']
-    SAUCES_BUTTON = [By.XPATH, '//*[@id="root"]/div/main/section[1]/div[1]/div[2]/span']
-    SPICY_SAUCE = [By.XPATH, '//*[@id="root"]/div/main/section[1]/div[2]/ul[2]/a[1]/p']
-    BREAD_BUTTON = [By.XPATH, '//*[@id="root"]/div/main/section[1]/div[1]/div[1]/span']
-    FLU_BREAD = [By.XPATH, '//*[@id="root"]/div/main/section[1]/div[2]/ul[1]/a[1]/p']
-    FILLINGS_BUTTON = [By.XPATH, '//*[@id="root"]/div/main/section[1]/div[1]/div[3]/span']
-    MEAT_BUTTON = [By.XPATH, '//*[@id="root"]/div/main/section[1]/div[2]/ul[3]/a[1]/p']
+    BREAD_BUTTON = [By.CSS_SELECTOR, 'section[class*=BurgerIngredients] div[class*=tab_tab]:nth-child(1)']
+    SAUCES_BUTTON = [By.CSS_SELECTOR, 'section[class*=BurgerIngredients] div[class*=tab_tab]:nth-child(2)']
+    FILLINGS_BUTTON = [By.CSS_SELECTOR, 'section[class*=BurgerIngredients] div[class*=tab_tab]:nth-child(3)']
 
 
